@@ -77,7 +77,7 @@ decode = concatMap decode'
 		decode' (Single y) = [y]
 		decode' (Multiple x y) = replicate x y
 
-f-- Encode list into a ListItem type
+-- Encode list into a ListItem type
 encode' :: Eq a => [a] -> [(Int,a)]
 encode' = foldr helper []
     where
